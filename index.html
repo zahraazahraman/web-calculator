@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body id="body">
+    <div class="app" id="app">
+      <!-- left section -->
+      <div class="right">
+        <!-- display screen -->
+        <div class="screen" id="screen">
+          <div class="result" id="result">0</div>
+          <div class="display" id="display">0</div>
+        </div>
+
+        <!-- keyboard -->
+        <div class="kbd" id="kbd">
+          <!-- row 1 -->
+          <button class="key" data-value="(">(</button>
+          <button class="key" data-value=")">)</button>
+          <button class="key" data-fn="fact">x!</button>
+          <button class="key" data-fn="pow">xʸ</button>
+          <button class="key op" data-value="÷">÷</button>
+          <button class="key op" data-value="×">×</button>
+
+
+          <!-- row 2 -->
+          <button class="key" data-fn="sin">sin</button>
+          <button class="key" data-fn="cos">cos</button>
+          <button class="key" data-fn="tan">tan</button>
+          <button class="key" data-fn="log">log</button>
+          <button class="key op" data-value="-">−</button>
+          <button class="key op" data-value="+">+</button>
+
+
+          <!-- row 3 -->
+          <button class="key num" data-value="7">7</button>
+          <button class="key num" data-value="8">8</button>
+          <button class="key num" data-value="9">9</button>
+          <button class="key" data-fn="sqrt">√</button>
+          <button class="key" data-fn="ln">ln</button>
+          <button class="key del" id="clear">AC</button>
+
+
+          <!-- row 4 -->
+          <button class="key num" data-value="4">4</button>
+          <button class="key num" data-value="5">5</button>
+          <button class="key num" data-value="6">6</button>
+          <button class="key" data-fn="exp">eˣ</button>
+          <button class="key" data-fn="abs">|x|</button>
+          <button class="key del" id="del">⌫</button>
+
+
+          <!-- row 5 -->
+          <button class="key num" data-value="1">1</button>
+          <button class="key num" data-value="2">2</button>
+          <button class="key num" data-value="3">3</button>
+          <button class="key" data-fn="pi">π</button>
+          <button class="key" data-fn="e">e</button>
+          <button class="key op" id="equals">=</button>
+
+
+          <!-- row 6 -->
+          <button class="key num" data-value="0">0</button>
+          <button class="key" data-value=".">.</button>
+          <button class="key" data-fn="rand">rand</button>
+          <button class="key" data-fn="inv">1/x</button>
+          <button class="key" data-fn="ans">ANS</button>
+          <button class="key" data-fn="toggle-sign">±</button>
+        </div>
+      </div>
+
+      <!-- right section -->
+      <div class="right">
+        <div class="section-btn-container">
+          <button class="btn" id="open-settings" data-key="settings">Settings</button>
+          <button class="btn" id="open-history" data-key="history">History</button>
+        </div>
+
+        <!-- hidden settings panel -->
+        <div class="settings hidden" id="settings">
+          <h3 data-key="settings">Settings</h3>
+          <div>
+            <label data-key="theme">Theme:</label>
+            <select id="theme" class="select">
+              <option value="light" data-key="light">Light</option>
+              <option value="dark" data-key="dark">Dark</option>
+            </select>
+          </div>
+          <div>
+            <label data-key="language">Language:</label>
+            <select id="language" class="select">
+              <option value="en">English</option>
+              <option value="ar">العربية</option>
+            </select>
+          </div>
+          <div class="flex">
+            <label class="switch" data-key="sound">Sound:</label>
+            <input type="checkbox" class="sound-toggle" id="sound-toggle" checked />
+          </div>
+
+          <div class="grid">
+            <button class="btn" id="apply-settings" data-key="apply">Apply</button>
+          </div>
+        </div>
+
+        <!-- hidden history panel -->
+        <div class="history hidden" id="history">
+          <div class="grid">
+            <h3 data-key="history">History</h3>
+            <button class="btn" id="clear-history" data-key="clearHistory">Clear History</button>
+          </div>
+          <div id="history-container">
+
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <script src="index.js"></script>
+  </body>
+</html>
